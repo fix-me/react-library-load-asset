@@ -1,5 +1,5 @@
-# fixme1-react-component-library-asset
-Load a library asset in a react app
+# react-library-load-asset
+How do I load a replaceable asset file inside a react component library?
 
 ## Setup
 1. cd into library and run the commands
