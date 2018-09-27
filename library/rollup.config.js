@@ -36,7 +36,31 @@ export default {
     copy([
       { files: 'src/assets/**/*.*', dest: 'dist/assets' },
     ], {verbose: true}),
-    babel(),
+    babel({
+      presets: [
+        [
+          '@babel/react'
+        ], 
+        [
+          "@babel/env",
+          {
+            "modules": false
+          }
+        ],
+        [
+          "minify",
+          {
+            "mangle": true
+          }
+        ]
+      ],
+      plugins: [
+        
+      ],
+      exclude: [
+        'node_modules/**'
+      ]
+    }),
     minify()
   ]
 };

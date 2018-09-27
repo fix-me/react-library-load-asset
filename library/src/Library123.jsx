@@ -12,7 +12,7 @@ export class Library123 extends React.Component {
     window.console.log("here comes the dynamic file content:");
     
     let testFile = require("./assets/testFile.yaml");
-    fetch(testFile).then(data => window.console.log(data));
+    fetch(testFile).then(data => window.console.log(data, data.text()));
     
   }
   

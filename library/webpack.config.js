@@ -21,7 +21,16 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /(node_modules)/,
-        use: ['babel-loader']
+        use: {
+          loader: 'babel-loader',
+          options: {
+            "presets": [
+              "react",
+              "env",
+              "stage-0"
+            ]
+          }
+        }
       },
       {
         test: /\.ya?ml$/,
