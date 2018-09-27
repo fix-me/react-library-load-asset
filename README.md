@@ -18,3 +18,5 @@ If you look inside the network packets of your browsers developer console F12, y
 If you found this, looking for a solution, try rollup: https://medium.com/@kelin2025/so-you-wanna-use-es6-modules-714f48b3a953
 
 For the library run **npm run rollup** instead of **npm run build** to test the library build using rollupJS.
+
+Also the **rollup-jest-boilerplate** might be your friend: https://github.com/algolia/rollup-jest-boilerplate
