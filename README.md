@@ -1,5 +1,5 @@
-# fixme1-react-component-library-asset
-Load a library asset in a react app
+# react-library-load-asset
+How do I load a replaceable asset file inside a react component library?
 
 ## Setup
 1. cd into library and run the commands
@@ -13,3 +13,6 @@ Load a library asset in a react app
   
 ## Challenge
 If you look inside the network packets of your browsers developer console F12, you will notice that the 'testFile.yaml' contents got overwritten with the default react index page. So **what changes need to be done inside library to get the file loaded properly, __without__ touching reactapps package.json and doing devServer stuff or something similar?**
+
+## Solution
+If you found this, looking for a solution, try rollup: https://medium.com/@kelin2025/so-you-wanna-use-es6-modules-714f48b3a953
