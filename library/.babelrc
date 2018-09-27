@@ -1,7 +1,25 @@
 {
-    "presets": [
-        "react",
-        "env",
-        "stage-0"
+  presets: [
+    [
+      '@babel/react'
+    ], 
+    [
+      "@babel/env",
+      {
+        "modules": false
+      }
+    ],
+    [
+      "minify",
+      {
+        "mangle": true
+      }
     ]
+  ],
+  plugins: [
+    
+  ],
+  exclude: [
+    'node_modules/**'
+  ]
 }

@@ -8,8 +8,9 @@ module.exports = {
   mode: 'production',
   entry: path.resolve(__dirname, 'src/index.js'),
   output: {
+    pathinfo: true,
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    publicPath: "/",
     filename: 'fixme1library.js',
     library: 'fixme1library',
     libraryTarget: 'umd',
@@ -45,6 +46,7 @@ module.exports = {
     modules: [
       path.resolve(__dirname, 'src'),
       path.resolve(__dirname, 'node_modules'),
+      path.resolve(__dirname, './assets')
     ]
   },
   externals: {
@@ -62,7 +64,18 @@ module.exports = {
       root: "ReactDOM"
     }
   },
+  plugins: [
+    //new webpack.IgnorePlugin(/testFile/)
+  ],
   optimization: {
     minimize: false
-  }
+  },
+  devServer: {
+    contentBase: path.resolve(__dirname, '../dist'),
+    hot: false,
+    port: process.env.npm_package_config_ports_webpack,
+    stats: 'minimal',
+    disableHostCheck: true,
+  },
+  watch: true
 };

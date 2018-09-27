@@ -1,15 +1,18 @@
-import React from 'React';
-import testFile from "./testFile.yaml";
+import React from 'react';
+//import testFile from "./testFile.yaml";
 
 
 export class Library123 extends React.Component {
   constructor() {
     super();
     
-    window.console.log("here comes the dynamic file content:");
-    window.console.log("url:", testFile);
+    window.console.log("lib...v2:");
+    window.console.log("proc", process);
     
-    fetch(testFile).then((data) => window.console.log(data));
+    window.console.log("here comes the dynamic file content:");
+    
+    let testFile = require("./assets/testFile.yaml");
+    fetch(testFile).then(data => window.console.log(data));
     
   }
   
